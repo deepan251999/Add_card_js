@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Caprasimo&family=Dancing+Script:wght@500&family=Inter:wght@300&family=Jost:ital,wght@0,200;0,300;0,400;0,500;1,200&family=Lexend&family=Lilita+One&family=Plus+Jakarta+Sans:wght@200;400;500&family=Poppins:ital,wght@0,400;0,600;1,600&family=Public+Sans&family=Roboto+Slab:wght@400;500&family=Rubik&family=Teko&family=Unbounded:wght@200;300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+.container{
+    width: 100%;
+    padding-bottom: 30px;
+    position: relative;
+    background: url("https://st.depositphotos.com/2363887/2572/i/450/depositphotos_25724621-stock-photo-orange-slice-falling-and-splashing.jpg");
+}
+nav{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding: 0 100px;
+    background: rgb(0 0 0 / 50%);
+    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 998;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+nav img{
+    width: 100px;
+}
+nav p i{
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+}
+header{
+    width: 80%;
+    margin: auto;
+}
+.card_container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #7f7575;
+    background: #f5f6fd;
+}
+.cards:hover{
+    transform: translateY(-5px);
+    transition: 0.5s;
+}
+.cards img{
+    height: 180px;
+}
+.cards h4{
+    font-size: 22px;
+    font-weight: 500;
+    padding: 5px 0;
+}
+.cards p{
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(197, 73, 73);
+    padding: 5px;
+}
+.cards button{
+    border: none;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 5px;
+    background: #ff347d;
+    color: #fff;
+    cursor: pointer;
+}
+.cards button:hover{
+     background: #e81864;
+     transition: 0.5s;
+}
+.add_sideCard_container{
+    background: rgba(0,0,0,0.5);
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+    right:0;
+    overflow: hidden;
+}
+.add_sideCard_toggle{
+    height: 100%;
+    width: 30%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    transition: 1s;
+    padding: 20px;
+    z-index: 999;
+}
+.card_close{
+    display: flex;
+    justify-content: end;
+    font-size: 20px;
+    color: rgb(244, 93, 93);
+}
+.card_close i{
+    cursor: pointer;
+}
