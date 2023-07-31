@@ -14,65 +14,67 @@
                 <img src="https://png.pngtree.com/png-clipart/20230414/original/pngtree-summer-orange-juice-png-image_9054080.png" alt="">
             </div>
             <div>
-                 <p id="shop_icon"><i class="fa-solid fa-bag-shopping"></i></p>
+                 <p id="shop_icon"><i class="fa-solid fa-bag-shopping"></i><span class="CartCount">0</span></p>
             </div>
         </nav>
         <header>
             <div class="card_container">
-                <div class="cards">
-                    <div >
-                        <img src="https://www.pngplay.com/wp-content/uploads/12/Pineapple-Juice-Transparent-PNG.png" alt="">
-                    </div>
-                    <h4 class="prodect_name">Pineapple</h4>
-                    <p class="product_price">120.00</p>
-                    <button class="add_card_button">Add to Card</button>
-                </div>
-                <div class="cards">
-                    <div>
-                        <img src="https://pngimg.com/uploads/juice/juice_PNG7156.png" alt="">
-                    </div>
-                    <h4 class="prodect_name">Orange</h4>
-                    <p class="product_price">110.00</p>
-                    <button class="add_card_button">Add to Card</button>
-                </div>
-                <div class="cards">
-                    <div>
-                        <img src="https://www.pngplay.com/wp-content/uploads/12/Strawberry-Juice-Transparent-PNG.png" alt="">
-                    </div>
-                    <h4 class="prodect_name">Straberry</h4>
-                    <p class="product_price">340.00</p>
-                    <button class="add_card_button">Add to Card</button>
-                </div>
-                <div class="cards">
-                    <div>
-                        <img src="https://static.vecteezy.com/system/resources/previews/021/665/579/original/delicious-lemonade-glass-cutout-png.png" alt="">
-                    </div>
-                    <h4 class="prodect_name">Lemon</h4>
-                    <p class="product_price">80.00</p>
-                    <button class="add_card_button">Add to Card</button>
-                </div>
-                <div class="cards">
-                    <div>
-                        <img src="https://www.pngall.com/wp-content/uploads/9/Pomegranate-Juice-PNG-Photos.png" alt="">
-                    </div>
-                    <h4 class="prodect_name">Pomegranate</h4>
-                    <p class="product_price">230.00</p>
-                    <button class="add_card_button">Add to Card</button>
-                </div>
-                <div class="cards">
-                    <div>
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/041/496/original/3d-render-of-strawberry-shake-glass-with-whipped-cream-dripping-chocolate-syrup-element-png.png" alt="">
-                    </div>
-                    <h4 class="prodect_name">Strabery Shake</h4>
-                    <p class="product_price">45.00</p>
-                    <button class="add_card_button">Add to Card</button>
-                </div>
+
             </div>
         </header>
-        <div class="add_sideCard_container">
-            <p class="card_close"><i class="fa-solid fa-xmark"></i></p>
+
+        <div class="add_cardItem_container">
+            <div class="card_heading"> 
+                <h3>Your Order</h3>
+                <p class="card_close"><i class="fa-solid fa-xmark"></i></p>
+            </div>
+            <div class="card_item_container">
+                
+            </div>
+            <div class="Price_order_container">
+                <div>
+                    <button>Place Order</button>
+                </div>
+                <div>
+                    <p class="total_price">00</p>
+                </div>
+            </div>
         </div>
     </div>
+            <!-- PLACE ORDER -->
+    <div class="place_order_opacity">
+        <div class="place_order_container">
+            <div class="place_order_card_item_container">
+                <table>
+                    <thead>
+                       <tr>
+                        <th>FOODS</th>
+                        <th>Tittle</th>
+                        <th>Price</th>
+                        <th>Quantity Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <p class="place_total_price">00</p>
+            </div>
+            <div class="buy_order_container">
+                <div>
+                    <button onclick="HandleBuyOrder()">Buy Order</button>
+                </div>
+                <div>
+                    <button onclick="HandleBuyOrderCancel()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       
+    
 
     <script src="./juices.js"></script>
 </body>

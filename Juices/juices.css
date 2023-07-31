@@ -7,6 +7,7 @@
 }
 .container{
     width: 100%;
+    background: #dadada;
     padding-bottom: 30px;
     position: relative;
     background: url("https://st.depositphotos.com/2363887/2572/i/450/depositphotos_25724621-stock-photo-orange-slice-falling-and-splashing.jpg");
@@ -23,7 +24,7 @@ nav{
     position: relative;
     position: sticky;
     top: 0;
-    z-index: 998;
+    z-index: 995;
 }
 .logo{
     display: flex;
@@ -31,7 +32,19 @@ nav{
     height: 100%;
 }
 nav img{
-    width: 100px;
+    height: 80px;
+}
+#shop_icon{
+    position: relative;
+}
+#shop_icon span{
+    position: absolute;
+    top: -13px;
+    right: -15px;
+    padding: 0 5px;
+    border-radius: 50%;
+    background: #ff347d;
+    color: #fff;
 }
 nav p i{
     font-size: 20px;
@@ -59,22 +72,22 @@ header{
     margin: 10px;
     border-radius: 5px;
     box-shadow: 2px 2px 4px #7f7575;
-    background: #f5f6fd;
+    background: #fff;
 }
 .cards:hover{
     transform: translateY(-5px);
     transition: 0.5s;
 }
 .cards img{
-    height: 180px;
+    height: 150px;
 }
 .cards h4{
-    font-size: 22px;
+    font-size: 19px;
     font-weight: 500;
     padding: 5px 0;
 }
 .cards p{
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     color: rgb(197, 73, 73);
     padding: 5px;
@@ -89,35 +102,205 @@ header{
     cursor: pointer;
 }
 .cards button:hover{
-     background: #e81864;
+    background: #e81864;
      transition: 0.5s;
 }
-.add_sideCard_container{
-    background: rgba(0,0,0,0.5);
+.home_page_container{
+    display: flex;
+    justify-content: center;
+}
+.home_page_container a button{
+    border: 1px solid #ff347d;
+    background: #ff347d;
+    padding: 13px 26px;
+    cursor: pointer;
+    border-radius: 8px;
+    color: #fff;
+}
+.home_page_container a button:hover{
+    background: #e81864;
+    transition: 1s;
+}
+        /* SIDE CARD ITEMS */
+
+.add_cardItem_container{
     height: 100%;
     width: 0;
-    position: absolute;
+    position: fixed;
     top: 0;
     right:0;
-    overflow: hidden;
+    background: #fff;
+    color: #141313;
+    z-index: 997;
+    overflow-y: scroll;
 }
-.add_sideCard_toggle{
+.add_sideCard{
     height: 100%;
     width: 30%;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
-    background: rgba(0,0,0,0.5);
     transition: 1s;
-    padding: 20px;
-    z-index: 999;
+    overflow-y: scroll;
 }
-.card_close{
+.add_sideCard::-webkit-scrollbar {
+    width: 10px;
+}
+.add_sideCard::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+.add_sideCard::-webkit-scrollbar-thumb {
+    background: rgb(198, 192, 192); 
+    border-radius: 10px;
+}
+.add_sideCard::-webkit-scrollbar-thumb:hover {
+    background: #979797; 
+    transition: 1s;
+}
+.card_heading{
     display: flex;
-    justify-content: end;
-    font-size: 20px;
-    color: rgb(244, 93, 93);
+    justify-content: space-between;
+    padding: 20px;
+}
+.card_heading h3{
+    text-align: center;
+    width: 90%;
 }
 .card_close i{
+    cursor: pointer;
+    color: red;
+    font-size: 25px;
+}
+.card_items{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px 0;
+    border: 1px solid #eee;
+}
+.card_item_image_container{
+    width: 38%;
+    display: flex;
+    justify-content: center;
+}
+.card_item_image_container img{
+    width: 70px;
+}
+.card_item_content{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.card_item_price{
+    font-size: 13px;
+    padding: 4px 0;
+}
+.quantity_container{
+    display: flex;
+    justify-content: center;
+}
+.quantity_container p{
+    padding: 0 5px;
+}
+.quantity_container button{
+    padding: 0 5px;
+}
+.card_item_delete{
+    width: 12%;
+}
+.card_item_delete i{
+    color: red;
+    cursor: pointer;
+}
+.Price_order_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+.Price_order_container button{
+    border: none;
+    padding: 13px 26px;
+    background: #ff347d;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.Price_order_container button:hover{
+    background: #e81864;
+    transition: 1s;
+}
+    /* PLACE ORDER */
+.place_order_opacity{
+    height: 100vh;
+    width: 0%;
+    background: rgba(0,0,0,0.5);
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.place_order_opcityshow{
+    width: 100%;
+    overflow: visible;
+}
+.place_total_price{
+    display: flex;
+    justify-content: end;
+    padding-right: 74px;
+}
+.place_order_container{
+    width: 60%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+.place_order_card_item_container table{
+   width: 100%;
+}
+.place_order_card_item_container table tr{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.place_order_card_item_container table tr th{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+.place_order_card_item_container table tr td{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+.place_order_card_item_container table tr td img{
+    width: 70px;
+}
+.buy_order_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    margin-top: 40px;
+}
+.buy_order_container button{
+    padding: 10px;
+    border-radius: 5px;
+    background: #ff347d;
+    color: #fff;
+    border: none;
     cursor: pointer;
 }
